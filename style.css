@@ -1,0 +1,272 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #6b46c1, #ec4899, #f3e8ff);
+            min-height: 100vh;
+            color: #1f2937;
+        }
+
+        /* Responsive Container System
+Consistent spacing and alignment */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Clear Visual Hierarchy
+Typography and headings */
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: #6b46c1;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 600;
+            color: #ec4899;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* Sticky Navigation
+Simple, consistent navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #ec4899;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f0edf7;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: #ec4899;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-text {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: #1f2937;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        /* About Me Section Minimal cognitive load */
+        .about-section {
+            background: white;
+            padding: 3rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-item {
+            background: linear-gradient(135deg, #f3e8ff, #fce7f3);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #ec4899;
+            transition: transform 0.3s ease;
+        }
+
+        .about-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-item::before {
+            content: "💜";
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-item:nth-child(2)::before {
+            content: "🎨";
+        }
+
+        .about-item:nth-child(3)::before {
+            content: "🖌️";
+        }
+
+        .about-item:nth-child(4)::before {
+            content: "☕";
+        }
+
+        .about-item:nth-child(5)::before {
+            content: "🐱";
+        }
+
+        .about-item:nth-child(6)::before {
+            content: "🌿";
+        }
+
+        .about-item:nth-child(7)::before {
+            content: "🌅";
+        }
+
+        .about-item:nth-child(8)::before {
+            content: "👨‍👩‍👧‍👦";
+        }
+
+        .about-item:nth-child(9)::before {
+            content: "📚";
+        }
+
+        .about-item:nth-child(10)::before {
+            content: "🎵";
+        }
+
+        .about-item:nth-child(11)::before {
+            content: "💕";
+        }
+
+        /* Call-to-Action Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1f2937, #6b46c1);
+            padding: 3rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-btn {
+            padding: 1rem 2rem;
+            background: #ec4899;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #ec4899;
+        }
+
+        .cta-btn:hover {
+            background: transparent;
+            color: #ec4899;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design Mobile first approach */
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .nav-link {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Accessibility High contrast and readable typography */
+        .about-item {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Floating animation for cute effect */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero {
+            animation: float 6s ease-in-out infinite;
+        }
